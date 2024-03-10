@@ -5,6 +5,8 @@ import slides from "../data/japan-carousel.json";
 import cuisineSlides from "../data/cuisine-photos.json";
 
 const About = () => {
+
+
   return (
     <div className='grid-container'>
 
@@ -17,9 +19,9 @@ const About = () => {
           </p>
 
           <div>
-            <button><a href='#lifelong'>Lifelong Learner</a></button>
-            <button><a href='#japan'>Japanese Experiences</a></button>
-            <button><a href='#cuisine'>Culinary Experiences</a></button>
+            <button  className='buttonTile'><a href='#lifelong'>Lifelong Learner</a></button>
+            <button className='buttonTile'><a href='#japan'>Japanese Experiences</a></button>
+            <button className='buttonTile'><a href='#cuisine'>Culinary Experiences</a></button>
           </div>
       </div>
       <div id='lifelong' className='grid-item'>
