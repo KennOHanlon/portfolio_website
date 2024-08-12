@@ -1,0 +1,24 @@
+{
+    "slides": [
+        {
+            "src": "./assets/leadersEatLast.png",
+            "alt": "Leaders Eat Last by Simon Sinek"
+        },
+        {
+            "src": "./assets/goSuckALemon.jpg",
+            "alt": "Go Suck a Lemon by Michael Cornwall"
+        },
+        {
+            "src": "./assets/radicalHonesty.jpg",
+            "alt": "Radical Honesty by Brad Blanton"
+        },
+        {
+            "src": "./assets/psychologyOfMoney.jpg",
+            "alt": "The Psychology of Money by Morgan Housel"
+        },
+        {
+            "src": "./assets/atomicHabits.jpg",
+            "alt": "Atomic Habits by James Clear"
+        }
+    ]
+}

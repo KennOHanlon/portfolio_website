@@ -7,6 +7,36 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.center{
+  padding: 1%;
+  align-items: center;
+  text-align: center;
+}
+
+.justify {
+  margin: 0 2% 0 5%;
+  text-align: justify;
+}
+
+.book {
+  margin: 2% 0 0 2%;
+  width: 12em;
+}
+
+.bookWithBorder {
+  width: 12em;
+  margin: 2% 0 0 2%;
+  padding-top: 1%;
+  border-color: grey;
+  border-width: 1px;
+  border-style: solid;
+}
+
+.bookImgContainerMobile{
+  display: none;
+}
+
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -30,11 +60,13 @@ code {
 }
 
 .grid-item {
+
   display: block;
   padding: 5%;
   text-align: center;
   background-color: white;
   grid-column: 1 / span 4;
+
 }
 
 .background-image{
@@ -74,6 +106,12 @@ code {
   @media screen and (max-width: 768px) {
     border: none;
   }
+}
+
+.buttonTile{
+  /* margin-right: 1%; */
+  margin-left: 1%;
+  padding: 2% 5%;
 }
 
 .button-tile-container {
@@ -162,6 +200,30 @@ code {
     /* text-align: left; */
     justify-content: center;
     width: 100%;
+  }
+
+  .buttonTile {
+    white-space: pre-line;
+    padding: 3% 0%;
+    margin: 2% 0%;
+    width: 75vw;
+  }
+  
+  .justify {
+    
+    text-align: left;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .bookImgContainerMobile{
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+  }
+
+  .bookImgContainer{
+    display: none;
   }
 }
 

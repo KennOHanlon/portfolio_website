@@ -27,14 +27,16 @@ textarea {
 }
 
 button {
-  background-color: #fff59ee8; /* Light yellow */
-  color: #6d4c41; /* Brown */
+  background-color: #B2C6B2  ; /* Light yellow */
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  text-decoration: none;
+  color: #6d4c41;
 }
 
+
 button:hover {
-  background-color: #ffee58; /* Lighter shade of yellow */
+  background-color: #C0D2C0; /* Lighter shade of yellow */
 }

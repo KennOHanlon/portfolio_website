@@ -3,6 +3,7 @@ import '../index.css';
 import { Carousel } from '../components/Carousel.jsx';
 import slides from "../data/japan-carousel.json";
 import cuisineSlides from "../data/cuisine-photos.json";
+import bookSlides from "../data/books-carousel.json";
 
 const About = () => {
 
@@ -15,18 +16,43 @@ const About = () => {
         <p>I love solving problems which pairs well with my natural curiousity 
           for the world because it helps me to come up with innovative solutions. </p>
           <p>
-            Click below to learn about each of the respective parts of my life!
+            Click below to learn more about some of my favorite interests!
           </p>
 
-          <div>
-            <button  className='buttonTile'><a href='#lifelong'>Lifelong Learner</a></button>
-            <button className='buttonTile'><a href='#japan'>Japanese Experiences</a></button>
-            <button className='buttonTile'><a href='#cuisine'>Culinary Experiences</a></button>
+          <div className='center'>
+            <a href='#lifelong'><button  className='buttonTile'>Lifelong Learner</button></a>
+            <a href='#japan'><button className='buttonTile'>Japanese Experiences</button></a>
+            <a href='#cuisine'><button className='buttonTile'>Culinary Experiences</button></a>
           </div>
       </div>
       <div id='lifelong' className='grid-item'>
         <h2 >Lifelong Learner</h2>
+        <div className='container'>
+          <div className='justify'>
+              <p>I am a person of many interests and hobbies, but I always like to be learning and improving at the things I pursue. </p>
+                
+              <p>I am a fan of the concept that consistency builds success, and that creating habits to 
+                invest in yourself is one of the best things you can do. After all, if I improve 1% every day, then I will be 3.5 times the person I am today in a year from now.
+              </p>
 
+              <p>I have listed some of my favorite books below that I read in the pursuit of continuing to improve myself. I like to read at least twenty minutes every night for concepts that can help me in my personal life.
+              </p>
+
+              <div className='bookImgContainer'>
+              <img className='book' src="./assets/leadersEatLast.png" alt="Leaders Eat Last by Simon Sinek"></img> 
+              <img className='bookWithBorder' src="./assets/goSuckALemon.jpg" alt="Go Suck a Lemon by Michael Cornwall"></img> 
+              <img className='book' src="./assets/radicalHonesty.jpg" alt="Radical Honesty by Brad Blanton"></img> 
+              <img className='book' src="./assets/psychologyOfMoney.jpg" alt="The Psychology of Money by Morgan Housel"></img> 
+              <img className='book' src="./assets/atomicHabits.jpg" alt="Atomic Habits by James Clear"></img> 
+
+              </div>
+
+              <div className='bookImgContainerMobile'>
+              <Carousel data={bookSlides}/>
+              </div>
+          
+          </div>
+        </div>
       </div>
         <div id='japan' className='grid-item'>
           <h2>Appreciation for Japanese Culture</h2>
