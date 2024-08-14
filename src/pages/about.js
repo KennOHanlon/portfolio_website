@@ -5,8 +5,17 @@ import slides from "../data/japan-carousel.json";
 import cuisineSlides from "../data/cuisine-photos.json";
 import bookSlides from "../data/books-carousel.json";
 
+
 const About = () => {
 
+  const smoothScroll = (e) => {
+    e.preventDefault();
+  
+   const anchor = e.target.closest("a");   // Find closest Anchor (or self)
+  if (!anchor) return;                     // Not found. Exit here.
+  document.getElementById(anchor.getAttribute('href').substring(1)).scrollIntoView({ behavior: "smooth", block: "start"});
+  
+  }
 
   return (
     <div className='grid-container'>
@@ -14,15 +23,17 @@ const About = () => {
       <div className='grid-item-header'>
         <h2>Who am I?</h2>
         <p>I love solving problems which pairs well with my natural curiousity 
-          for the world because it helps me to come up with innovative solutions. </p>
+          for the world because it helps me to come up with innovative solutions. Not every problem needs 
+          a unique solution, but finding the right solution to each problem is what I find so much fun about the process! </p>
+          <p>Whether I am playing 18 holes of golf, </p>
           <p>
             Click below to learn more about some of my favorite interests!
           </p>
 
           <div className='center'>
-            <a href='#lifelong'><button  className='buttonTile'>Lifelong Learner</button></a>
-            <a href='#japan'><button className='buttonTile'>Japanese Experiences</button></a>
-            <a href='#cuisine'><button className='buttonTile'>Culinary Experiences</button></a>
+            <a href='#lifelong' onClick={smoothScroll}><button className='buttonTile'>Lifelong Learner</button></a>
+            <a href='#japan' onClick={smoothScroll}><button className='buttonTile'>Japanese Experiences</button></a>
+            <a href='#cuisine'onClick={smoothScroll}><button className='buttonTile'>Culinary Experiences</button></a>
           </div>
       </div>
       <div id='lifelong' className='grid-item'>
@@ -32,12 +43,12 @@ const About = () => {
               <p>I am a person of many interests and hobbies, but I always like to be learning and improving at the things I pursue. </p>
                 
               <p>I am a fan of the concept that consistency builds success, and that creating habits to 
-                invest in yourself is one of the best things you can do. After all, if I improve 1% every day, then I will be 3.5 times the person I am today in a year from now.
+                invest in yourself is one of the best things you can do. After all, if I improve 1% every day, then I will be 37 times the person I am today in a year from now.
               </p>
 
               <p>I have listed some of my favorite books below that I read in the pursuit of continuing to improve myself. I like to read at least twenty minutes every night for concepts that can help me in my personal life.
               </p>
-
+          </div>
               <div className='bookImgContainer'>
               <img className='book' src="./assets/leadersEatLast.png" alt="Leaders Eat Last by Simon Sinek"></img> 
               <img className='bookWithBorder' src="./assets/goSuckALemon.jpg" alt="Go Suck a Lemon by Michael Cornwall"></img> 
@@ -51,7 +62,7 @@ const About = () => {
               <Carousel data={bookSlides}/>
               </div>
           
-          </div>
+          
         </div>
       </div>
         <div id='japan' className='grid-item'>

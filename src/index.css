@@ -32,10 +32,18 @@ body {
   border-style: solid;
 }
 
+.grid-item-header h2 {
+  font-size: 2em;
+}
+
 .bookImgContainerMobile{
   display: none;
 }
 
+.bookImgContainer {
+  width: 100%;
+  justify-items: center;
+}
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
