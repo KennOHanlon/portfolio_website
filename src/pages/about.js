@@ -22,20 +22,28 @@ const About = () => {
 
       <div className='grid-item-header'>
         <h2>Who am I?</h2>
-        <p>I love solving problems which pairs well with my natural curiousity 
-          for the world because it helps me to come up with innovative solutions. Not every problem needs 
-          a unique solution, but finding the right solution to each problem is what I find so much fun about the process! </p>
-          <p>Whether I am playing 18 holes of golf, </p>
-          <p>
-            Click below to learn more about some of my favorite interests!
-          </p>
+        <div className='container'>
 
-          <div className='center'>
-            <a href='#lifelong' onClick={smoothScroll}><button className='buttonTile'>Lifelong Learner</button></a>
-            <a href='#japan' onClick={smoothScroll}><button className='buttonTile'>Japanese Experiences</button></a>
-            <a href='#cuisine'onClick={smoothScroll}><button className='buttonTile'>Culinary Experiences</button></a>
+            <div className='justify'>
+
+            <p>A problem solver. I love to solve problems which pairs with my natural curiousity 
+              for the world because it helps me to explore the problem to come up with innovative solutions. Not every problem needs 
+              a unique solution, but finding the right solution to each problem is what I find so much fun about the process! </p>
+              <p>Outside of exploring technologies and expanding my career as a software engineer, I have a variety of interests. 
+                I regularly enjoy reading to expand my knowledge about the evergrowing the world around me - particularly psychology and finance.
+                I am fascinated with traveling and worldly culture - Japanese culture in particular - and I like to regularly hit the links and play 18 holes of golf. </p>
+              <p>
+                Click below to learn more about some of my favorite interests.
+              </p>
+              </div>
           </div>
-      </div>
+              <div className='center'>
+                <a href='#lifelong' onClick={smoothScroll}><button className='buttonTile'>Lifelong Learner</button></a>
+                <a href='#japan' onClick={smoothScroll}><button className='buttonTile'>Japan Travel</button></a>
+                <a href='#cuisine'onClick={smoothScroll}><button className='buttonTile'>'Fore!' Ways Golf Impacted My Life</button></a>
+              </div>
+          </div>
+        
       <div id='lifelong' className='grid-item'>
         <h2 >Lifelong Learner</h2>
         <div className='container'>
@@ -66,7 +74,7 @@ const About = () => {
         </div>
       </div>
         <div id='japan' className='grid-item'>
-          <h2>Appreciation for Japanese Culture</h2>
+          <h2>Appreciation for World Culture</h2>
           <div className='container'>
             <div className='container-text'>
               <p>When I was growing up, I wanted to be a ninja. As funny and embarassing as it is reflecting on that, I studied the Japanese language and culture for 
@@ -77,7 +85,10 @@ const About = () => {
               </p>
               <p>
                 I visited Japan for a couple weeks in May of 2023. I traveled to Tokyo and then took a bullet train to Osaka and Kyoto.
-                Click through the carousel to see images from my trip! 
+                I have plans to revisit in November of 2024, but will be planning trips to Europe afterwards. 
+              </p>
+              <p>  
+              Stay tuned for more, but for now click through the carousel to see images from my trip! 
               </p>
             </div>
             <div className='container-picture'>
@@ -87,9 +98,21 @@ const About = () => {
 
         </div>
         <div id='cuisine' className='grid-item'>
-          <h2>Cusine Connoisseur</h2>
+          <h2>'Fore!' Ways Golf Has Impacted My Life</h2>
 
-          <p> Add GALLERY ROULETTE of tiktok embedded videos of food transitions</p>
+          <div className='container'>
+            <div className='container-text'>
+              <p>I had a 5 iron in my hands at five years old. Golf has always been a part of my life.</p>
+
+              <p>My first job was a caddie, I used to wake up every day during the summer at 5:30AM to ride my bike to the country club. I would then caddie 36 holes of golf, ride my bike home, and then go play 18 holes myself.</p>
+
+              <p>At the end of high school, I was awarded the Chick Evans Caddie Scholarship - a full ride scholarship to attend the Univesity of Michigan.</p>
+
+              <p>Golf has grown and evolved with me throughout my life, its been a staple for me for many years. In my current life, I use it as a way to spend
+                quality time with my retired father.
+              </p>
+            </div>
+          </div>
 
           <div className='container-picture'>
               <Carousel data={cuisineSlides}/>
