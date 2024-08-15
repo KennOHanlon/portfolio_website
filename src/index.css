@@ -124,6 +124,9 @@ code {
   /* margin-right: 1%; */
   margin-left: 1%;
   padding: 2% 5%;
+  width: 25vw;
+  min-width: 300px;
+  height: 75px;
 }
 
 .button-tile-container {

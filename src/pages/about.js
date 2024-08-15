@@ -111,6 +111,8 @@ const About = () => {
               <p>Golf has grown and evolved with me throughout my life, its been a staple for me for many years. In my current life, I use it as a way to spend
                 quality time with my retired father.
               </p>
+              <p>Click on the dots on the map of Michigan to see the courses I've played and how I rate them.
+              </p>
             </div>
           </div>
 
