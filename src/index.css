@@ -249,6 +249,17 @@ code {
   justify-content: center;
 }
 
+.container-golf-map {
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+  background-image: url("/public/assets/michigan-map.png");
+  background-repeat: no-repeat;
+  width: fit-content;
+  min-height: 400px;
+  
+}
+
 .icn-link{
   display: flex;
   align-items: center;

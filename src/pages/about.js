@@ -2,7 +2,6 @@ import React from 'react';
 import '../index.css';
 import { Carousel } from '../components/Carousel.jsx';
 import slides from "../data/japan-carousel.json";
-import cuisineSlides from "../data/cuisine-photos.json";
 import bookSlides from "../data/books-carousel.json";
 
 
@@ -114,11 +113,10 @@ const About = () => {
               <p>Click on the dots on the map of Michigan to see the courses I've played and how I rate them.
               </p>
             </div>
+            <div className='container-golf-map'>
+            </div>
           </div>
 
-          <div className='container-picture'>
-              <Carousel data={cuisineSlides}/>
-            </div>
         </div>
 
     </div>
