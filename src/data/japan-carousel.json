@@ -1,19 +1,19 @@
 {
     "slides": [
         {
-            "src": "./assets/ueno-park-tree.jpg",
+            "src": "/assets/ueno-park-tree.jpg",
             "alt": "Circular tree in Ueno park overlooking shrine."
         },
         {
-            "src": "./assets/kyoto-temple.jpg",
+            "src": "/assets/kyoto-temple.jpg",
             "alt": "Temple in Kyoto Japan."
         },
         {
-            "src": "./public/assets/yasaka-pagoda.jpg",
+            "src": "public/assets/yasaka-pagoda.jpg",
             "alt": "Yasaka Pagoda in Kyoto Japan."
         },
         {
-            "src": "./public/assets/arashiyama-bamboo.jpg",
+            "src": "assets/arashiyama-bamboo.jpg",
             "alt": "Arashiyama Bamboo forest in Kyoto Japan"
         },
         {
