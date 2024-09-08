@@ -13,7 +13,7 @@
             "alt": "Yasaka Pagoda in Kyoto Japan."
         },
         {
-            "src": "assets/arashiyamabamboo.JPG",
+            "src": "public/assets/arashiyamabamboo.JPG",
             "alt": "Arashiyama Bamboo forest in Kyoto Japan"
         },
         {
@@ -21,7 +21,7 @@
             "alt": "Busy Tokyo skyline as seen from hotel in Shibuya"
         },
         {
-            "src": "assets/ueno-park-steps.jpg",
+            "src": "https://github.com/KennOHanlon/portfolio_website/blob/main/public/assets/yasaka-pagoda.jpg",
             "alt": "Girl walking down Ueno Park steps."
         }
     ]
