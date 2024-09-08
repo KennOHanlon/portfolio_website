@@ -1,27 +1,27 @@
 {
     "slides": [
         {
-            "src": "assets/uenoparktree.JPG",
+            "src": "/assets/uenoparktree.JPG",
             "alt": "Circular tree in Ueno park overlooking shrine."
         },
         {
-            "src": "assets/kyoto-temple.jpg",
+            "src": "/assets/kyoto-temple.jpg",
             "alt": "Temple in Kyoto Japan."
         },
         {
-            "src": "assets/yasaka-pagoda.jpg",
+            "src": "/assets/yasaka-pagoda.jpg",
             "alt": "Yasaka Pagoda in Kyoto Japan."
         },
         {
-            "src": "assets/arashiyamabamboo.JPG",
+            "src": "/assets/arashiyamabamboo.JPG",
             "alt": "Arashiyama Bamboo forest in Kyoto Japan"
         },
         {
-            "src": "assets/shibuya-hotel.jpg",
+            "src": "/assets/shibuya-hotel.jpg",
             "alt": "Busy Tokyo skyline as seen from hotel in Shibuya"
         },
         {
-            "src": "assets/ueno-park-steps.jpg",
+            "src": "/assets/ueno-park-steps.jpg",
             "alt": "Girl walking down Ueno Park steps."
         }
     ]
