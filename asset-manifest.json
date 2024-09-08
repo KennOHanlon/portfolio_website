@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/portfolio_website/static/css/main.f78af6ed.css",
-    "main.js": "/portfolio_website/static/js/main.15293180.js",
-    "static/media/woodgrain.png": "/portfolio_website/static/media/woodgrain.0b8fb931d0ad8f4201fe.png",
-    "index.html": "/portfolio_website/index.html",
-    "main.f78af6ed.css.map": "/portfolio_website/static/css/main.f78af6ed.css.map",
-    "main.15293180.js.map": "/portfolio_website/static/js/main.15293180.js.map"
+    "main.css": "/static/css/main.f78af6ed.css",
+    "main.js": "/static/js/main.81b1adb7.js",
+    "static/media/woodgrain.png": "/static/media/woodgrain.0b8fb931d0ad8f4201fe.png",
+    "index.html": "/index.html",
+    "main.f78af6ed.css.map": "/static/css/main.f78af6ed.css.map",
+    "main.81b1adb7.js.map": "/static/js/main.81b1adb7.js.map"
   },
   "entrypoints": [
     "static/css/main.f78af6ed.css",
-    "static/js/main.15293180.js"
+    "static/js/main.81b1adb7.js"
   ]
 }
