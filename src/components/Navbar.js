@@ -12,6 +12,7 @@ import linkedInIcn from './linkedin-icn.png';
 import personalLogo from './fresh-tech-ko.png';
 import navBackground from './woodgrain.png';
 import '../index.css'
+import MobileNav from './MobileNav';
 
 const Navbar = () => {
   return (
@@ -48,7 +49,8 @@ const Navbar = () => {
             <NavBtn>
               <NavBtnLink to='/contact-me' activeStyle>Contact Me</NavBtnLink>
             </NavBtn>
-            <Bars />
+            <MobileNav className='hamburger' />
+            {/* <Bars /> */}
           </div>
         </div>
       </div>

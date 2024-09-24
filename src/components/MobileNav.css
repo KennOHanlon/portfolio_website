@@ -1,0 +1,85 @@
+.mobile-nav {
+    position: relative;
+  }
+  
+  .hamburger {
+    display: none;
+    color: #808080;
+    background-color: white;
+    @media screen and (max-width: 768px) {
+      display: inline-flex;
+      align-items: center;
+      font-size: 1.8rem;
+      cursor: pointer;
+      margin-left: 10px;
+    }
+  }
+  
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.9); /* Darker overlay */
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+  }
+  
+.overlay.open {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .nav-menu {
+    position: fixed;
+    top: 0;
+    right: 0%; /* Start outside of the view on the right */
+    width: 300px; /* Define width for the sliding menu */
+    height: 100%; /* Full height */
+    background: white;
+    padding: 20px;
+    box-sizing: border-box;
+    transition: transform 0.5s ease;
+    transform: translateX(100%); /* Slide from right */
+  }
+  
+  .nav-menu.open {
+    transform: translateX(0); /* Slide into view */
+  }
+  
+  .nav-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px; /* Space between the close button and the menu links */
+  }
+  
+  .close {
+    right: 10%;
+    top: 2%;
+    position: absolute;
+    background: none;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    /* padding: 0; */
+  }
+  
+  .nav-menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .nav-menu li {
+    margin: 30px 0;
+  }
+  
+  .nav-menu a {
+    text-decoration: none;
+    color: black;
+    font-size: 24px;
+  }
