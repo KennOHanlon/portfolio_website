@@ -1,7 +1,7 @@
 # ✅ React Learning Checklist
 
 ### 🧠 Week 1: JS Refresh + React Basics
-- [ ] Review JS destructuring, spread/rest
+- [x] Review JS destructuring, spread/rest
 - [ ] Practice `map`, `filter`, arrow functions
 - [ ] Learn JSX and functional components
 - [ ] Use `useState` and `useEffect`
