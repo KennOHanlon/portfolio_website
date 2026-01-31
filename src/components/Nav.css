@@ -1,0 +1,132 @@
+/* NAV */
+.nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    height: 90px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(6px);
+}
+
+.logo-wrapper {
+    position: relative;
+    width: auto;
+    height: 80px;
+    width: auto;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*aspect-ratio: 1/1;*/
+    border-radius: 10px;
+}
+
+@property --aa {
+  syntax: '<angle>';
+  inherits: false;
+  initial-value: 0deg;
+}
+
+.logo-wrapper::before {
+    content: "";
+    position: absolute;
+    inset: -2px;
+    border-radius: inherit;
+    background: repeating-conic-gradient(
+            from var(--aa),
+            #ffd966 0%,
+            #ffbf00 5%,
+            transparent 5%,
+            transparent 40%,
+            #ffd966 50%
+    );
+    opacity: 0;
+    z-index: -1;
+}
+
+.logo-wrapper:has(.logo-img:hover)::before {
+    opacity: 1;
+    animation: autoRotate 6s linear infinite;
+}
+
+
+@keyframes autoRotate {
+    0% {
+        --aa: 0deg;
+    }
+    100% {
+        --aa: 360deg;
+    }
+}
+
+.logo-wrapper::after {
+    filter: blur(10px);
+}
+
+.logo-img {
+    height: inherit;
+    width: auto;
+    z-index: 2;
+    padding: 0 5px;
+    background-color: white;
+    border-radius: inherit;
+}
+
+/* LEFT */
+.nav-logo img {
+    height: 55px;
+    width: auto;
+    cursor: pointer;
+}
+
+.nav-left {
+    padding-left: 2rem;
+}
+
+/* RIGHT */
+.nav-right {
+    padding-right: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+}
+
+.nav-icon img {
+    height: 32px;
+    width: auto;
+    opacity: 0.85;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.nav-icon img:hover {
+    opacity: 1;
+    transform: translateY(-2px);
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .nav-logo img {
+        height: 48px;
+    }
+
+    .nav-icon img {
+        height: 28px;
+    }
+
+    .logo-wrapper::before{
+        display: none;
+    }
+
+    .nav-left {
+        padding-left: 1rem;
+    }
+
+    /* RIGHT */
+    .nav-right {
+        padding-right: 1rem;
+    }
+}
