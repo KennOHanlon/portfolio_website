@@ -6,7 +6,7 @@ const Home = () => {
       <main className="home">
           {/* home */}
           <section className="home">
-              <h1>I’m Just Ken 🎵</h1>
+              <h1>Ken O'Hanlon</h1>
               <h2>Software Engineer</h2>
 
               <p className="home-subtitle">
@@ -14,7 +14,7 @@ const Home = () => {
                   complex problems through clean, thoughtful design.
               </p>
               <p>
-                  "So, hey, check me out, yeah, I'm just Ken." 🎵
+                  "So, hey, check me out, yeah, I'm just Ken."
               </p>
               <div className="home-actions">
                   <Link to="/experience" className="primary-btn">
