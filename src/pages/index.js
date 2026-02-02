@@ -6,14 +6,16 @@ const Home = () => {
       <main className="home">
           {/* home */}
           <section className="home">
-              <h1>Hi, I’m Ken!</h1>
+              <h1>I’m Just Ken 🎵</h1>
               <h2>Software Engineer</h2>
 
               <p className="home-subtitle">
                   I build scalable, user-focused software and enjoy solving
                   complex problems through clean, thoughtful design.
               </p>
-
+              <p>
+                  "So, hey, check me out, yeah, I'm just Ken." 🎵
+              </p>
               <div className="home-actions">
                   <Link to="/experience" className="primary-btn">
                       View Experience
@@ -49,7 +51,7 @@ const Home = () => {
 
               <Link to="/about" className="feature-card">
                   <h3>About Me</h3>
-                  <p>How I think, what I value, and what drives me.</p>
+                  <p>How I think, what I value, and what drives me. Dive deeper into the Kenergy.</p>
               </Link>
 
               <Link to="/trips" className="feature-card">

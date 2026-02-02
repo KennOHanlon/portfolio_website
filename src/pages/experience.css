@@ -1,0 +1,41 @@
+.resume-download {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.resume-download-container {
+    background-color: rgba(178, 172, 136, 0.25);
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.5rem;
+    padding: 1rem 0;
+    border-radius: 1rem;
+    min-width: 320px;
+}
+
+.download-label {
+    font-weight: 600;
+    color: #6b7280;
+}
+
+.download-btn {
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    background: #1f2937;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.download-btn.secondary {
+    background: #374151;
+}
+
+.download-btn:hover {
+    background: #111827;
+}
+

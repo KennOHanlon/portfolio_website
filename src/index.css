@@ -71,8 +71,15 @@ code {
   text-align: center;
 }
 
-.grid-item {
+.timeline-container {
+  display: block;
+  text-align: center;
+  background-color: white;
+  grid-column: 1 / span 4;
 
+}
+
+.grid-item {
   display: block;
   padding: 5%;
   text-align: center;

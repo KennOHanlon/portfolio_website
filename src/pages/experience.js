@@ -1,17 +1,59 @@
 import React from 'react';
+import './experience.css'
+import CustomTimeline from "../components/CustomTimeline";
 
 const Experience = () => {
-  return (
-    <div className='resume-container'>
-      <div className='grid-item'>
-          <iframe title="Word Resume" src="https://1drv.ms/w/c/c93dfaff3d80cf23/IQTXw37N-IY4QYaFap9Syf4SARPXF2t1ZW3HtDjxQiGBNks?em=2&amp;wdEmbedCode=0" width="100%" height="600px" frameborder="0">
-              This is an embedded
-              <a target="_blank" rel="noreferrer" href="https://office.com">Microsoft Office</a>
-              document, powered by
-              <a target="_blank" rel="noreferrer" href="https://office.com/webapps">Office</a>.</iframe>
-      </div>
-    </div>
-  )
-}
+    const trackResumeClick = (format) => {
+        if (window.gtag) {
+            window.gtag('event', 'resume_download', {
+                event_category: 'engagement',
+                event_label: format,
+            });
+        }
+    };
+
+    return (
+        <div>
+            {/* Download Buttons */}
+            <div className="resume-download">
+                <div className="resume-download-container">
+                    <span className="download-label">Resume Download:</span>
+
+                    <a
+                        href="/Kenneth_OHanlon_Resume.pdf"
+                        download
+                        onClick={() => trackResumeClick('pdf')}
+                        className="download-btn"
+                    >
+                        PDF
+                    </a>
+
+                    <a
+                        href="/Kenneth_OHanlon_Resume.docx"
+                        download
+                        onClick={() => trackResumeClick('word')}
+                        className="download-btn secondary"
+                    >
+                        Word
+                    </a>
+                </div>
+            </div>
+
+            <div className="timeline-container">
+                <CustomTimeline />
+            </div>
+
+            <div className="grid-item">
+                <iframe
+                    title="Word Resume"
+                    src="https://1drv.ms/w/c/c93dfaff3d80cf23/IQTXw37N-IY4QYaFap9Syf4SARPXF2t1ZW3HtDjxQiGBNks?em=2&wdEmbedCode=0"
+                    width="100%"
+                    height="600px"
+                    frameBorder="0"
+                />
+            </div>
+        </div>
+    );
+};
 
 export default Experience;
