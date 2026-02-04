@@ -1,41 +1,62 @@
-import React from 'react';
-import './experience.css'
+import React, { useState } from 'react';
+import './experience.css';
 import CustomTimeline from "../components/CustomTimeline";
 
 const Experience = () => {
-    const trackResumeClick = (format) => {
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    const [isLoading, setIsLoading] = useState(true);
+
+    const trackResumeClick = (action) => {
         if (window.gtag) {
-            window.gtag('event', 'resume_download', {
+            window.gtag('event', 'resume_interaction', {
                 event_category: 'engagement',
-                event_label: format,
+                event_label: action,
             });
         }
     };
 
+    const closeModal = () => {
+        setIsModalOpen(false);
+        setIsLoading(true);
+    };
+
     return (
         <div>
-            {/* Download Buttons */}
-            <div className="resume-download">
-                <div className="resume-download-container">
-                    <span className="download-label">Resume Download:</span>
+            {/* Resume Actions */}
+            <div className="resume-actions">
+                <div className="resume-card">
+                    <span className="resume-label">Download Resume</span>
+                    <div className="resume-buttons">
+                        <a
+                            href="/Kenneth_OHanlon_Resume.pdf"
+                            download
+                            onClick={() => trackResumeClick('download_pdf')}
+                            className="resume-btn"
+                        >
+                            PDF
+                        </a>
+                        <a
+                            href="/Kenneth_OHanlon_Resume.docx"
+                            download
+                            onClick={() => trackResumeClick('download_word')}
+                            className="resume-btn"
+                        >
+                            Word
+                        </a>
+                    </div>
+                </div>
 
-                    <a
-                        href="/Kenneth_OHanlon_Resume.pdf"
-                        download
-                        onClick={() => trackResumeClick('pdf')}
-                        className="download-btn"
+                <div className="resume-card">
+                    <span className="resume-label">View Resume</span>
+                    <button
+                        className="resume-btn"
+                        onClick={() => {
+                            trackResumeClick('view_browser');
+                            setIsModalOpen(true);
+                        }}
                     >
-                        PDF
-                    </a>
-
-                    <a
-                        href="/Kenneth_OHanlon_Resume.docx"
-                        download
-                        onClick={() => trackResumeClick('word')}
-                        className="download-btn secondary"
-                    >
-                        Word
-                    </a>
+                        Open in Browser
+                    </button>
                 </div>
             </div>
 
@@ -43,15 +64,40 @@ const Experience = () => {
                 <CustomTimeline />
             </div>
 
-            <div className="grid-item">
-                <iframe
-                    title="Word Resume"
-                    src="https://1drv.ms/w/c/c93dfaff3d80cf23/IQTXw37N-IY4QYaFap9Syf4SARPXF2t1ZW3HtDjxQiGBNks?em=2&wdEmbedCode=0"
-                    width="100%"
-                    height="600px"
-                    frameBorder="0"
-                />
-            </div>
+            {/* Modal */}
+            {isModalOpen && (
+                <div className="modal-overlay" onClick={closeModal}>
+                    <div
+                        className="modal-content"
+                        onClick={(e) => e.stopPropagation()}
+                    >
+                        {/* Close Button */}
+                        <button
+                            className="modal-close"
+                            onClick={closeModal}
+                            aria-label="Close resume viewer"
+                        >
+                            ✕
+                        </button>
+
+                        {/* Loader */}
+                        {isLoading && (
+                            <div className="iframe-loader">
+                                <div className="spinner" />
+                                <span>Loading resume…</span>
+                            </div>
+                        )}
+
+                        <iframe
+                            title="Resume Viewer"
+                            src="https://1drv.ms/w/c/c93dfaff3d80cf23/IQTXw37N-IY4QYaFap9Syf4SARPXF2t1ZW3HtDjxQiGBNks?em=2&wdEmbedCode=0"
+                            frameBorder="0"
+                            onLoad={() => setIsLoading(false)}
+                            className={`resume-iframe ${isLoading ? 'hidden' : ''}`}
+                        />
+                    </div>
+                </div>
+            )}
         </div>
     );
 };

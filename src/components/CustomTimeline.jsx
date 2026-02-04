@@ -6,7 +6,7 @@ import TimelineSeparator from '@mui/lab/TimelineSeparator';
 import TimelineConnector from '@mui/lab/TimelineConnector';
 import TimelineContent from '@mui/lab/TimelineContent';
 import TimelineOppositeContent from '@mui/lab/TimelineOppositeContent';
-import {Avatar} from "@mui/material";
+import {Avatar, Typography} from "@mui/material";
 import TimelineCard from "./TimelineCard";
 
 const CustomTimeline = () => {
@@ -23,21 +23,20 @@ const CustomTimeline = () => {
                               },
                           },
                       }}>
-                {/*<TimelineSeparator className="timeline-year-label">*/}
-                {/*    <Typography className="hide-on-fullscreen">*/}
-                {/*        2026*/}
-                {/*    </Typography>*/}
-                {/*</TimelineSeparator>*/}
                 <TimelineItem>
                     <TimelineOppositeContent
                         sx={{ m: 'auto 0' }}
                         variant="body2"
                         color="text.secondary"
+                        className="date-label"
                     >
                         December 2025
                     </TimelineOppositeContent>
                     <TimelineSeparator>
                         <TimelineConnector />
+                        <Typography className="hide-on-fullscreen date-label">
+                            Dec 2025
+                        </Typography>
                         <Avatar
                             src="GCP_Professional_Cloud_Developer_Cert.png"
                             alt="GCP Certification Icon"
@@ -73,11 +72,15 @@ const CustomTimeline = () => {
                         sx={{ m: 'auto 0' }}
                         variant="body2"
                         color="text.secondary"
+                        className="date-label"
                     >
                         October 2024
                     </TimelineOppositeContent>
                     <TimelineSeparator>
                         <TimelineConnector />
+                        <Typography className="hide-on-fullscreen date-label">
+                            Oct 2024
+                        </Typography>
                         <Avatar
                             src="Ford-Logo.png"
                             alt="Ford Motor Company Logo"
@@ -109,11 +112,15 @@ const CustomTimeline = () => {
                         sx={{ m: 'auto 0' }}
                         variant="body2"
                         color="text.secondary"
+                        className="date-label"
                     >
                         January 2024
                     </TimelineOppositeContent>
                     <TimelineSeparator>
                         <TimelineConnector />
+                        <Typography className="hide-on-fullscreen date-label">
+                            Jan 2024
+                        </Typography>
                         <Avatar
                             src="Ford-Logo.png"
                             alt="Ford Motor Company Logo"
@@ -149,11 +156,15 @@ const CustomTimeline = () => {
                         sx={{ m: 'auto 0' }}
                         variant="body2"
                         color="text.secondary"
+                        className="date-label"
                     >
                         January 2022
                     </TimelineOppositeContent>
                     <TimelineSeparator>
                         <TimelineConnector />
+                        <Typography className="hide-on-fullscreen date-label">
+                            Jan 2022
+                        </Typography>
                         <Avatar
                             // className="timeline-logo"
                             src="Ford-Logo.png"
@@ -185,11 +196,15 @@ const CustomTimeline = () => {
                         sx={{ m: 'auto 0' }}
                         variant="body2"
                         color="text.secondary"
+                        className="date-label"
                     >
                         December 2021
                     </TimelineOppositeContent>
                     <TimelineSeparator>
                         <TimelineConnector />
+                        <Typography className="hide-on-fullscreen date-label">
+                            Dec 2021
+                        </Typography>
                         <Avatar
                             variant="square"
                             src="Wayne-State-Logo.png"
@@ -225,11 +240,15 @@ const CustomTimeline = () => {
                         sx={{ m: 'auto 0' }}
                         variant="body2"
                         color="text.secondary"
+                        className="date-label"
                     >
                         November 2020
                     </TimelineOppositeContent>
                     <TimelineSeparator>
                         <TimelineConnector />
+                        <Typography className="hide-on-fullscreen date-label">
+                            Nov 2020
+                        </Typography>
                         <Avatar
                             src="Masco-Logo.png"
                             alt="Masco Corporation Logo"
