@@ -1,126 +1,188 @@
-import React from 'react';
-import '../index.css';
-import { Carousel } from '../components/Carousel.jsx';
+import React from "react";
+import { Carousel } from "../components/Carousel";
 import slides from "../data/japan-carousel.json";
 import bookSlides from "../data/books-carousel.json";
+import "../pages/about.css";
+import landingImage from "../data/japan-fuji-cropped.jpg";
 
 
 const About = () => {
+  const scrollToSection = (id) => {
+    const section = document.getElementById(id);
+    if (!section) return;
+    section.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
 
-  const smoothScroll = (e) => {
-    e.preventDefault();
+  const LandingCard = ({ icon, title, description, onClick }) => {
+    return (
+      <div className="landing-card" onClick={onClick}>
+        <div className="card-icon">{icon}</div>
+        <h3>{title}</h3>
+        <p>{description}</p>
+        <div className="card-hover-indicator">Explore →</div>
+      </div>
+    );
+  };
   
-   const anchor = e.target.closest("a");   // Find closest Anchor (or self)
-  if (!anchor) return;                     // Not found. Exit here.
-  document.getElementById(anchor.getAttribute('href').substring(1)).scrollIntoView({ behavior: "smooth", block: "start"});
-  
-  }
 
   return (
-    <div className='grid-container'>
+    <div className="about-page">
 
-      <div className='grid-item-header'>
-        <h2>Who am I?</h2>
-        <div className='container'>
+      <section className="about-landing">
+          <div
+            className="landing-background"
+            style={{ backgroundImage: `url(${landingImage})` }}
+          />
 
-            <div className='justify'>
+          <div className="landing-overlay" />
 
-            <p>A problem solver. I love to solve problems which pairs with my natural curiousity 
-              for the world because it helps me to explore the problem to come up with innovative solutions. Not every problem needs 
-              a unique solution, but finding the right solution to each problem is what I find so much fun about the process! </p>
-              <p>Outside of exploring technologies and expanding my career as a software engineer, I have a variety of interests. 
-                I regularly enjoy reading to expand my knowledge about the evergrowing the world around me - particularly psychology and finance.
-                I am fascinated with traveling and worldly culture - Japanese culture in particular - and I like to regularly hit the links and play 18 holes of golf. </p>
-              <p>
-                Click below to learn more about some of my favorite interests.
-              </p>
-              </div>
+          <div className="landing-content">
+          <h1 className="landing-title">
+            Problem Solver. <br />
+            Lifelong Learner. <br />
+            Builder.
+          </h1>
+
+          <p className="landing-subheadline">
+            In code and in life, I build thoughtful systems, explore ideas deeply, and pursue
+            growth with intention.
+          </p>
+
+          <p className="landing-description">
+            Whether engineering scalable applications, studying psychology,
+            finance, or culture, I’m driven by curiosity and disciplined execution.
+          </p>
+
+          <div className="landing-card-grid">
+            <LandingCard
+              icon="📚"
+              title="Lifelong Learning"
+              description="Books, systems thinking, and 1% daily improvement."
+              onClick={() => scrollToSection("learning")}
+            />
+            <LandingCard
+              icon="🌏"
+              title="Cultural Exploration"
+              description="Japanese language, travel, and global perspective."
+              onClick={() => scrollToSection("culture")}
+            />
+            <LandingCard
+              icon="⛳"
+              title="Golf & Discipline"
+              description="Work ethic, consistency, and legacy."
+              onClick={() => scrollToSection("golf")}
+            />
           </div>
-              <div className='center'>
-                <a href='#lifelong' onClick={smoothScroll}><button className='buttonTile'>Lifelong Learner</button></a>
-                <a href='#japan' onClick={smoothScroll}><button className='buttonTile'>Japan Travel</button></a>
-                <a href='#cuisine'onClick={smoothScroll}><button className='buttonTile'>'Fore!' Ways Golf Impacted My Life</button></a>
-              </div>
-          </div>
-        
-      <div id='lifelong' className='grid-item'>
-        <h2 >Lifelong Learner</h2>
-        <div className='container'>
-          <div className='justify'>
-              <p>I am a person of many interests and hobbies, but I always like to be learning and improving at the things I pursue. </p>
-                
-              <p>I am a fan of the concept that consistency builds success, and that creating habits to 
-                invest in yourself is one of the best things you can do. After all, if I improve 1% every day, then I will be 37 times the person I am today in a year from now.
-              </p>
-
-              <p>I have listed some of my favorite books below that I read in the pursuit of continuing to improve myself. I like to read at least twenty minutes every night for concepts that can help me in my personal life.
-              </p>
-          </div>
-              <div className='bookImgContainer'>
-              <img className='book' src="./assets/leadersEatLast.png" alt="Leaders Eat Last by Simon Sinek"></img> 
-              <img className='bookWithBorder' src="./assets/goSuckALemon.jpg" alt="Go Suck a Lemon by Michael Cornwall"></img> 
-              <img className='book' src="./assets/radicalHonesty.jpg" alt="Radical Honesty by Brad Blanton"></img> 
-              <img className='book' src="./assets/psychologyOfMoney.jpg" alt="The Psychology of Money by Morgan Housel"></img> 
-              <img className='book' src="./assets/atomicHabits.jpg" alt="Atomic Habits by James Clear"></img> 
-
-              </div>
-
-              <div className='bookImgContainerMobile'>
-              <Carousel data={bookSlides}/>
-              </div>
-          
-          
         </div>
-      </div>
-        <div id='japan' className='grid-item'>
-          <h2>Appreciation for World Culture</h2>
-          <div className='container'>
-            <div className='container-text'>
-              <p>When I was growing up, I wanted to be a ninja. As funny and embarassing as it is reflecting on that, I studied the Japanese language and culture for 
-                eight years because of that initial desire. After studying throughout all of high school, I eventually took runner-up at the Michigan High School Japanese Quiz Bowl in 2013.
-              </p>
-              <p> I learned that I love J-pop (Japanese pop music) - my two favorite songs are Sakura by Funky Monkey Babys and Kiseki by Greeeen! Both songs are worth looking at the
-                translated lyrics if you enjoy love songs.
-              </p>
-              <p>
-                I visited Japan for a couple weeks in May of 2023. I traveled to Tokyo and then took a bullet train to Osaka and Kyoto.
-                I have plans to revisit in November of 2024, but will be planning trips to Europe afterwards. 
-              </p>
-              <p>  
-              Stay tuned for more, but for now click through the carousel to see images from my trip! 
-              </p>
-            </div>
-            <div className='container-picture'>
-              <Carousel data={slides}/>
-            </div>
+      </section>
+
+
+      {/* ================= LIFELONG LEARNING ================= */}
+      <section id="learning" className="about-section alt-bg">
+        <div className="section-container split">
+
+          {/* TEXT SIDE */}
+          <div className="text-side">
+            <h2>Lifelong Learning</h2>
+
+            <blockquote>
+              “Consistency compounds. Improve 1% each day, and in a year
+              you’re 37x better.”
+            </blockquote>
+
+            <p>
+              Growth isn’t accidental. I build habits intentionally through reading nightly,
+              studying systems and refining my craft. I believe consistency builds
+              success, and investing in yourself compounds over time.
+            </p>
+
+            <p>
+              The books in the carousel are just a few that have shaped how I think about leadership,
+              discipline, honesty, psychology, and wealth.
+            </p>
           </div>
 
-        </div>
-        <div id='cuisine' className='grid-item'>
-          <h2>'Fore!' Ways Golf Has Impacted My Life</h2>
-
-          <div className='container'>
-            <div className='container-text'>
-              <p>I had a 5 iron in my hands at five years old. Golf has always been a part of my life.</p>
-
-              <p>My first job was a caddie, I used to wake up every day during the summer at 5:30AM to ride my bike to the country club. I would then caddie 36 holes of golf, ride my bike home, and then go play 18 holes myself.</p>
-
-              <p>At the end of high school, I was awarded the Chick Evans Caddie Scholarship - a full ride scholarship to attend the Univesity of Michigan.</p>
-
-              <p>Golf has grown and evolved with me throughout my life, its been a staple for me for many years. In my current life, I use it as a way to spend
-                quality time with my retired father.
-              </p>
-              <p>Click on the dots on the map of Michigan to see the courses I've played and how I rate them.
-              </p>
-            </div>
-            <div className='container-golf-map'>
-            </div>
+          {/* CAROUSEL SIDE */}
+          <div className="media-side">
+            <Carousel data={bookSlides} />
           </div>
 
         </div>
+      </section>
+
+
+      {/* ================= CULTURE / JAPAN ================= */}
+      <section id="culture" className="about-section">
+        <div className="section-container split">
+
+          <div className="text-side">
+            <h2>Appreciation for World Culture</h2>
+
+            <p>
+              When I was a kid, I wanted to be a ninja. That early fascination
+              evolved into eight years of studying Japanese language and culture.
+            </p>
+
+            <p>
+              In 2013, I placed runner-up in the Michigan High School Japanese
+              Quiz Bowl. Years later, I traveled to Tokyo, Kyoto, and Hiroshima allowing
+              me to experience firsthand the culture that first inspired me.
+            </p>
+
+            <p>
+              Travel broadens perspective. It challenges assumptions and builds
+              empathy. Japan sparked that curiosity, and I continue to explore
+              the world with the same mindset.
+            </p>
+          </div>
+
+          <div className="media-side">
+            <Carousel data={slides} />
+          </div>
+        </div>
+      </section>
+
+      {/* ================= GOLF ================= */}
+      <section id="golf" className="about-section alt-bg">
+        <div className="section-container split">
+
+          <div className="text-side">
+            <h2>⛳ Golf & Discipline</h2>
+
+            <p>
+              I had a 5-iron in my hands at five years old. Golf shaped my
+              discipline long before I understood the word.
+            </p>
+
+            <p>
+              Early mornings. Long summer days. 36 holes caddying, then 18 of my
+              own. That consistency built more than a swing, it built work ethic.
+            </p>
+
+            <p>
+              The Chick Evans Caddie Scholarship ultimately gave me a full ride
+              to the University of Michigan, a life-changing opportunity born
+              from persistence and discipline.
+            </p>
+
+            <p>
+              Today, golf is less about scorecards and more about time,
+              especially the rounds I play with my dad.
+            </p>
+          </div>
+
+          <div className="media-side">
+            {/* Future interactive Michigan course map goes here */}
+            <div className="placeholder-box">
+              Interactive course map coming soon.
+            </div>
+          </div>
+
+        </div>
+      </section>
 
     </div>
-  )
-}
+  );
+};
 
 export default About;

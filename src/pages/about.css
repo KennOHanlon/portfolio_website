@@ -1,0 +1,186 @@
+/* ================= PAGE STRUCTURE ================= */
+
+.about-page {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* ================= LANDING SECTION ================= */
+  
+  .about-landing {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 6rem 2rem;
+    color: white;
+    overflow: hidden;
+  }
+  
+  /* Background Image Layer */
+  .landing-background {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    filter: blur(6px) brightness(0.75) saturate(0.9);
+    transform: scale(1.1);
+    z-index: 0;
+  }
+  
+  /* Gradient Overlay */
+  .landing-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to bottom right,
+      rgba(0, 0, 0, 0.75),
+      rgba(0, 0, 0, 0.6)
+    );
+    z-index: 1;
+  }
+  
+  /* Landing Content */
+  .landing-content {
+    position: relative;
+    z-index: 2;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Landing Typography */
+  .landing-title {
+    font-size: clamp(2.8rem, 5vw, 4rem);
+    line-height: 1.1;
+    font-weight: 700;
+  }
+  
+  .landing-subheadline {
+    margin-top: 1.5rem;
+    font-size: 1.4rem;
+    max-width: 650px;
+    opacity: 0.9;
+  }
+  
+  .landing-description {
+    margin-top: 1rem;
+    max-width: 600px;
+    line-height: 1.7;
+    opacity: 0.8;
+  }
+  
+  /* ================= LANDING CARDS ================= */
+  
+  .landing-card-grid {
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 🔥 Force 3 side-by-side */
+    gap: 2rem;
+  }
+  
+  .landing-card {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(8px);
+    border-radius: 16px;
+    padding: 2rem;
+    cursor: pointer;
+    transition: all 0.35s ease;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    min-height: 180px; /* keeps them visually aligned */
+  }
+  
+  .landing-card h3 {
+    margin-top: 1rem;
+    font-size: 1.3rem;
+  }
+  
+  .landing-card p {
+    margin-top: 0.75rem;
+    font-size: 0.95rem;
+    opacity: 0.8;
+  }
+  
+  .card-icon {
+    font-size: 2rem;
+  }
+  
+  .card-hover-indicator {
+    margin-top: 1.5rem;
+    font-size: 0.85rem;
+    opacity: 0.6;
+    transition: transform 0.3s ease;
+  }
+  
+  .landing-card:hover {
+    transform: translateY(-8px);
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.3);
+  }
+  
+  .landing-card:hover .card-hover-indicator {
+    transform: translateX(6px);
+  }
+  
+  /* ================= CONTENT SECTIONS ================= */
+  
+  .about-section {
+    padding: 6rem 2rem;
+  }
+  
+  .alt-bg {
+    background-color: #f7f7f7;
+  }
+  
+  .section-container {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  
+/* ================= SPLIT LAYOUT ================= */
+
+.split {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* side-by-side */
+    gap: 3rem;
+    align-items: center; /* vertically center text + carousel */
+  }
+  
+  /* Optional: prevent carousel from stretching weirdly */
+  .media-side {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .text-side {
+    width: 100%;
+  }
+  
+  blockquote {
+    font-size: 1.4rem;
+    font-style: italic;
+    margin-top: 1rem;
+    opacity: 0.8;
+  }
+  
+  .placeholder-box {
+    height: 300px;
+    border-radius: 12px;
+    background: #eaeaea;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* ================= RESPONSIVE ================= */
+  
+  @media (max-width: 900px) {
+    .landing-card-grid {
+      grid-template-columns: 1fr; /* stack on mobile */
+    }
+  
+    .split {
+      grid-template-columns: 1fr;
+    }
+  }
+  
