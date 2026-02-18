@@ -4,10 +4,9 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages';
 import About from './pages/about';
 import Experience from './pages/experience';
-import Trips from './pages/trips';
-import SignIn from './pages/sign-in';
 import ContactMe from './pages/contact-me';
 import Nav from "./components/Nav";
+import Projects from "./pages/projects";
 
 function App() {
   return (
@@ -18,9 +17,9 @@ function App() {
         <Route path='/' element={<Home />} />
         <Route path='/about' element={<About />} />
         <Route path='/experience' element={<Experience />} />
-        <Route path='/trips' element={<Trips />} />
+        <Route path='/projects' element={<Projects />} />
         <Route path='/contact-me' element={<ContactMe />} />
-        <Route path='/sign-in' element={<SignIn />} />
+        {/*<Route path='/sign-in' element={<SignIn />} />*/}
       </Routes>
     </Router>
   );

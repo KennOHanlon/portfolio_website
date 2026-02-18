@@ -48,15 +48,17 @@ const Experience = () => {
 
                 <div className="resume-card">
                     <span className="resume-label">View Resume</span>
-                    <button
-                        className="resume-btn"
-                        onClick={() => {
-                            trackResumeClick('view_browser');
-                            setIsModalOpen(true);
-                        }}
-                    >
-                        Open in Browser
-                    </button>
+                    <div className="resume-buttons">
+                        <button
+                            className="resume-btn"
+                            onClick={() => {
+                                trackResumeClick('view_browser');
+                                setIsModalOpen(true);
+                            }}
+                        >
+                            Open in Browser
+                        </button>
+                    </div>
                 </div>
             </div>
 

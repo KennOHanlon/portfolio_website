@@ -27,14 +27,17 @@
     display: flex;
     gap: 0.75rem;
     justify-content: center;
+    min-height: 36px;
 }
 
 .resume-btn {
+    font-family: 'Inter', sans-serif;
     padding: 0.55rem 1.2rem;
     border-radius: 6px;
     background: #1f2937;
     color: #fff;
-    font-weight: 600;
+    font-weight: 500;
+    font-size: 0.9rem;
     border: none;
     cursor: pointer;
     text-decoration: none;
