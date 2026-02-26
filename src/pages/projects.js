@@ -29,7 +29,7 @@ const Projects = () => {
                         View Experience
                     </Link>
 
-                    <Link to="/contact-me" className="secondary-btn">
+                    <Link to="/contact" className="secondary-btn">
                         Get in Touch
                     </Link>
                 </div>

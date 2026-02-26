@@ -20,7 +20,7 @@ const MobileNav = () => {
             <li><a href="/" onClick={toggleNav}>Home</a></li>
             <li><a href="/about" onClick={toggleNav}>About</a></li>
             <li><a href="/experience" onClick={toggleNav}>Experience</a></li>
-            <li><a href="/contact-me" onClick={toggleNav}>Contact Me</a></li>
+            <li><a href="/contact" onClick={toggleNav}>Contact Me</a></li>
           </ul>
         </nav>
       </div>

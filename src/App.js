@@ -4,9 +4,10 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages';
 import About from './pages/about';
 import Experience from './pages/experience';
-import ContactMe from './pages/contact-me';
+import Contact from './pages/contact';
 import Nav from "./components/Nav";
 import Projects from "./pages/projects";
+import PostEmailSubmission from "./pages/PostEmailSubmission";
 
 function App() {
   return (
@@ -18,7 +19,8 @@ function App() {
         <Route path='/about' element={<About />} />
         <Route path='/experience' element={<Experience />} />
         <Route path='/projects' element={<Projects />} />
-        <Route path='/contact-me' element={<ContactMe />} />
+        <Route path='/contact' element={<Contact />} />
+          <Route path='/thanks' element={<PostEmailSubmission/>} />
         {/*<Route path='/sign-in' element={<SignIn />} />*/}
       </Routes>
     </Router>

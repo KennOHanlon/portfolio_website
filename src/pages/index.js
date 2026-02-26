@@ -26,7 +26,7 @@ const Home = () => {
                   <Link to="/experience" className="primary-btn">
                       View Experience
                   </Link>
-                  <Link to="/contact-me" className="secondary-btn">
+                  <Link to="/contact" className="secondary-btn">
                       Get in Touch
                   </Link>
               </div>
