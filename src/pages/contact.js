@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { useForm, useWatch } from "react-hook-form";
 import "./contact.css";
 
@@ -6,16 +6,9 @@ export default function Contact() {
     const emailApiKey = process.env.REACT_APP_WEB3_FORMS_EMAIL_PUBLIC_KEY;
 
     const {
-        register,
-        handleSubmit,
         setValue,
-        reset,
         control,
-        formState: { errors, isSubmitSuccessful, isSubmitting },
     } = useForm({ mode: "onTouched" });
-
-    const [isSuccess, setIsSuccess] = useState(false);
-    const [message, setMessage] = useState("");
 
     const userName = useWatch({
         control,
@@ -26,33 +19,6 @@ export default function Contact() {
     useEffect(() => {
         setValue("subject", `${userName} sent a message from Website`);
     }, [userName, setValue]);
-
-    const onSubmit = async (data, e) => {
-        await fetch("https://api.web3forms.com/submit", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-                Accept: "application/json",
-            },
-            body: JSON.stringify(data),
-        })
-            .then(async (response) => {
-                let json = await response.json();
-                if (json.success) {
-                    setIsSuccess(true);
-                    setMessage(json.message);
-                    e.target.reset();
-                    reset();
-                } else {
-                    setIsSuccess(false);
-                    setMessage(json.message);
-                }
-            })
-            .catch(() => {
-                setIsSuccess(false);
-                setMessage("Something went wrong. Please try again.");
-            });
-    };
 
     return (
         <div className="contact-page">
