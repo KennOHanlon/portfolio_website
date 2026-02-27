@@ -7,19 +7,48 @@
     flex-wrap: wrap;
 }
 
+/* ================= RESUME CARD ================= */
+
 .resume-card {
-    background-color: rgba(178, 172, 136, 0.25);
-    padding: 1rem 1.5rem;
-    border-radius: 1rem;
+    position: relative;
+    background: linear-gradient(145deg, #ffffff, #f9f9f9);
+    padding: 2rem;
+    border-radius: 16px;
     min-width: 260px;
     text-align: center;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+}
+
+/* Subtle gold accent border */
+.resume-card::before {
+    content: "";
+    position: absolute;
+    inset: -2px;
+    border-radius: inherit;
+    background: linear-gradient(135deg, #C9A227, #ffd966);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: -1;
+}
+
+/*.resume-card:hover {*/
+/*    transform: translateY(-6px);*/
+/*    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.1);*/
+/*}*/
+
+.resume-card:hover::before {
+    opacity: 1;
 }
 
 .resume-label {
     display: block;
-    font-weight: 600;
-    color: #6b7280;
-    margin-bottom: 0.75rem;
+    font-weight: 700;
+    font-size: 1.05rem;
+    color: #1a1a1a;
+    margin-bottom: 1rem;
 }
 
 /* Buttons */
@@ -30,22 +59,25 @@
     min-height: 36px;
 }
 
+/* ================= RESUME BUTTON ================= */
+
 .resume-btn {
     font-family: 'Inter', sans-serif;
-    padding: 0.55rem 1.2rem;
-    border-radius: 6px;
-    background: #1f2937;
-    color: #fff;
-    font-weight: 500;
+    padding: 0.7rem 1.4rem;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #F3E5AB, #FFFDF5);
+    color: #42300D;
+    font-weight: 600;
     font-size: 0.9rem;
     border: none;
     cursor: pointer;
     text-decoration: none;
-    transition: background 0.2s ease;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .resume-btn:hover {
-    background: #111827;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(255, 191, 0, 0.35);
 }
 
 /* Modal */
@@ -134,3 +166,31 @@
     }
 }
 
+@media (max-width: 768px) {
+    .resume-card {
+        width: 100%;
+        padding: 0.5rem;
+        justify-content: center;
+        align-content: center;
+        text-align: center;
+    }
+
+    .resume-btn {
+        width: 80%;
+    }
+
+    .resume-buttons {
+        flex-direction: column;
+        gap: 0.7rem;
+        align-items: center;
+    }
+
+    .resume-actions {
+        gap: 1rem;
+    }
+
+    .modal-content {
+        width: 95%;
+        height: 90%;
+    }
+}

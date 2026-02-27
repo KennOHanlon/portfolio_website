@@ -49,7 +49,7 @@ const Experience = () => {
                 <div className="resume-card">
                     <span className="resume-label">View Resume</span>
                     <div className="resume-buttons">
-                        <button
+                        <a
                             className="resume-btn"
                             onClick={() => {
                                 trackResumeClick('view_browser');
@@ -57,7 +57,7 @@ const Experience = () => {
                             }}
                         >
                             Open in Browser
-                        </button>
+                        </a>
                     </div>
                 </div>
             </div>

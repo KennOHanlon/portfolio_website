@@ -1,9 +1,9 @@
-import React from 'react';
-import {Link} from "react-router-dom";
-import "./home.css"
+import { Link } from "react-router-dom";
+import "./home.css";
 
 const Home = () => {
-  return (
+
+    return (
       <main className="home-container">
           {/* home */}
           <section className="home-hero">
@@ -32,6 +32,7 @@ const Home = () => {
               </div>
           </section>
           {/* CREDIBILITY */}
+          <h2 style={{marginBottom: "1rem"}}>At a Glance</h2>
           <section className="credibility">
               <div className="cred-item">
                   <h3>5+ Years Experience</h3>
@@ -50,24 +51,28 @@ const Home = () => {
           </section>
 
           {/* FEATURED SECTIONS */}
+          <h2 style={{marginBottom: "1rem"}}>Explore</h2>
           <section className="featured">
               <Link to="/about" className="feature-card">
                   <h3>About Me</h3>
                   <p>How I think, what I value, and what drives me. Dive deeper into the Kenergy.</p>
+                  <div className="feature-cta">Explore →</div>
               </Link>
 
               <Link to="/experience" className="feature-card">
                   <h3>Experience</h3>
                   <p>Professional work, impact, and technologies I’ve used.</p>
+                  <div className="feature-cta">View Experience →</div>
               </Link>
 
               <Link to="/projects" className="feature-card">
                   <h3>Projects</h3>
-                  <p>Coming soon! Section highlighting systems I've built.</p>
+                  <p>Systems I’ve built and architectural decisions behind them.</p>
+                  <div className="feature-cta">See Projects →</div>
               </Link>
           </section>
       </main>
-  )
+    );
 }
 
 export default Home;
