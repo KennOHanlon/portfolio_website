@@ -49,6 +49,7 @@ const Experience = () => {
                 <div className="resume-card">
                     <span className="resume-label">View Resume</span>
                     <div className="resume-buttons">
+                        {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
                         <a
                             className="resume-btn"
                             onClick={() => {
