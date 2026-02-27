@@ -66,6 +66,7 @@
     font-size: 1.4rem;
     max-width: 650px;
     opacity: 0.9;
+    color: white;
   }
   
   .landing-description {
@@ -73,6 +74,7 @@
     max-width: 600px;
     line-height: 1.7;
     opacity: 0.8;
+    color: white;
   }
   
   /* ================= LANDING CARDS ================= */

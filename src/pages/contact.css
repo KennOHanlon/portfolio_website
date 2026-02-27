@@ -8,13 +8,13 @@
 
 /* ================= CARD ================= */
 .contact-card {
-  background-color: rgba(214, 189, 123, 0.25);
+  background-color: #FFFBF0;
   padding: 2.5rem;
   border-radius: 1.25rem;
   width: 100%;
   max-width: 700px;
   backdrop-filter: blur(6px);
-  border: 1px solid #f3e3b3;
+  border: 1px solid #E6C46A;
 }
 
 /* ================= HEADER ================= */
@@ -26,12 +26,12 @@
 .contact-header h1 {
   font-size: 2rem;
   font-weight: 600;
-  color: #78350f; /* deep amber */
+  color: #6B4E16; /* deep amber */
   margin-bottom: 0.5rem;
 }
 
 .contact-header p {
-  color: #92400e; /* warm brown */
+  color: #9A7B2F; /* warm brown */
   font-size: 0.95rem;
 }
 
@@ -57,7 +57,7 @@ form {
 label {
   font-size: 0.85rem;
   font-weight: 600;
-  color: #92400e;
+  color: #6B4E16;
   margin-bottom: 0.4rem;
 }
 
@@ -95,7 +95,7 @@ textarea {
   font-family: "Inter", sans-serif;
   padding: 0.85rem 1.25rem;
   border-radius: 8px;
-  background: #a16207; /* warm amber */
+  background: #C9A227; /* warm amber */
   color: #fff;
   font-weight: 500;
   font-size: 0.95rem;
