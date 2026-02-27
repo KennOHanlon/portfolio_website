@@ -125,3 +125,29 @@ textarea {
   margin-top: 1rem;
   color: #78350f;
 }
+
+@media (max-width: 768px) {
+  .contact-page {
+    padding: 1rem 1rem;
+  }
+
+  .contact-card {
+    padding: 1rem 1.75rem;
+  }
+
+  .contact-btn {
+    margin: 1rem;
+  }
+
+  form {
+    gap: .5rem;
+  }
+
+  .form-row {
+    gap: .5rem;
+  }
+
+  .contact-header {
+    margin-bottom: 1rem;
+  }
+}

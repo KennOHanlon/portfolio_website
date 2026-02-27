@@ -124,7 +124,7 @@ p {
 /* ===== Mobile Polish ===== */
 /* ========================= */
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
 
     .success-container {
         padding: 1rem 0rem;

@@ -191,7 +191,21 @@
   
   /* ================= RESPONSIVE ================= */
   
-  @media (max-width: 900px) {
+  @media (max-width: 768px) {
+    .about-landing {
+      padding: 1rem 1rem;
+    }
+
+    .about-section {
+      padding: 2rem 1.5rem;
+    }
+
+    .landing-title {
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      line-height: 1.1;
+      font-weight: 700;
+    }
+
     .landing-card-grid {
       grid-template-columns: 1fr; /* stack on mobile */
     }

@@ -196,7 +196,8 @@ code {
     /* padding-right: 1% */
 }
 
-@media (max-width:771px) {
+@media (max-width:768px) {
+
     .container-text {
         /* text-align: left; */
         justify-content: center;
@@ -550,6 +551,10 @@ html, body {
 
 /* MOBILE */
 @media (max-width: 768px) {
+    .home-container {
+        padding: 1rem;
+    }
+
     .home-hero::before {
         width: 350px;
         height: 350px;
