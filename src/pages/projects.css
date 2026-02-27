@@ -72,6 +72,7 @@
     display: flex;
     gap: 1rem;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .primary-btn {
@@ -118,12 +119,22 @@
 
 /* MOBILE */
 @media (max-width: 768px) {
+    .coming-soon-box {
+        padding: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .projects-container {
+        padding: 1rem;
+    }
+
     .projects-hero h1 {
         font-size: 2.4rem;
     }
 
     .projects-subtitle {
         font-size: 1rem;
+        margin-bottom: 1rem;
     }
 
     .projects-hero::before {

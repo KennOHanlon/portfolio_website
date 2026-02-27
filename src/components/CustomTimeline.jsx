@@ -102,8 +102,15 @@ const CustomTimeline = () => {
                             variant="job"
                             title="Software Engineer II"
                             meta="Ford Motor Company · Career"
-                            description="Recognized for technical leadership, ownership of critical systems, and mentoring junior engineers."
+                            description="Recognized for technical leadership, ownership of critical systems (APIs, CI/CD, monitoring), and mentoring junior engineers."
                             current
+                            tags={[
+                                'Spring Boot',
+                                'Spring Batch',
+                                'REST',
+                                'GCP',
+                                'DevOps'
+                            ]}
                         />
                     </TimelineContent>
                 </TimelineItem>
@@ -140,7 +147,7 @@ const CustomTimeline = () => {
                             variant="job"
                             title="Software Engineer I"
                             meta="Ford Motor Company · Career"
-                            description="Designed and maintained secure, scalable Spring Boot and GraphQL services supporting enterprise vehicle data systems."
+                            description="Designed and maintained secure, scalable Spring Boot services supporting enterprise vehicle data systems."
                             tags={[
                                 'Java',
                                 'Spring Boot',
@@ -187,7 +194,7 @@ const CustomTimeline = () => {
                             variant="job"
                             title="Ford College Graduate (FCG)"
                             meta="Ford Motor Company · Career"
-                            description="Designed and maintained secure, scalable Spring Boot and GraphQL services supporting enterprise vehicle data systems."
+                            description="Partook in a rotational program, gaining plethora of diversified experience across enterprise technology systems. Utilized Test-Driven Development (TDD) and Extreme Programming (XP) practices to improve software quality and to iterate quickly."
                         />
                     </TimelineContent>
                 </TimelineItem>
@@ -270,7 +277,7 @@ const CustomTimeline = () => {
                             variant="job"
                             title="Power Platform Engineer"
                             meta="Masco Corporation · Career"
-                            description="Designed and maintained secure, scalable Spring Boot and GraphQL services supporting enterprise vehicle data systems."
+                            description="Coordinated the modernization of several enterprise .NET applications to Microsoft's Power Platform."
                             tags={[
                                 'Power Apps',
                                 'Power Automate',
