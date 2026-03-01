@@ -1,0 +1,124 @@
+/* ============================= */
+/* Floating Glass Bottom Nav     */
+/* ============================= */
+
+.bottom-nav {
+    position: fixed;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 95%;
+    max-width: 650px;
+    height: 80px;
+
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    align-items: center;
+
+    background: rgba(255, 255, 255, 0.72);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+
+    border-radius: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+
+    box-shadow:
+            0 15px 40px rgba(0, 0, 0, 0.08),
+            0 5px 15px rgba(0, 0, 0, 0.04);
+
+    z-index: 1000;
+    overflow: hidden;
+}
+
+/* ============================= */
+/* Sliding Gold Indicator        */
+/* ============================= */
+
+.active-indicator {
+    position: absolute;
+    top: 8px;
+    bottom: 8px;
+
+    border-radius: 40px;
+    background: linear-gradient(135deg, #c9a227, #ffd966);
+    opacity: 0.22;
+
+    transition: transform 0.35s cubic-bezier(.4,0,.2,1);
+}
+
+/* ============================= */
+/* Nav Item                      */
+/* ============================= */
+
+.nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-decoration: none;
+    color: #6b7280;
+
+    font-size: 12px;
+    font-weight: 500;
+
+    height: 100%;
+    z-index: 2;
+
+    transition: color 0.25s ease, transform 0.25s ease;
+}
+
+/* ============================= */
+/* Icon                          */
+/* ============================= */
+
+.nav-icon {
+    font-size: 20px;
+    margin-bottom: 4px;
+    transition: transform 0.25s ease;
+}
+
+/* ============================= */
+/* Active State                  */
+/* ============================= */
+
+.nav-item[aria-current="page"] {
+    font-weight: 700;
+    color: #1f2937;
+}
+
+.nav-item[aria-current="page"] .nav-icon {
+    transform: translateY(-2px) scale(1.08);
+}
+
+/* ============================= */
+/* Hover                         */
+/* ============================= */
+
+.nav-item:hover {
+    color: #111827;
+}
+
+/* ============================= */
+/* Responsive Scaling            */
+/* ============================= */
+
+@media (min-width: 900px) {
+    .bottom-nav {
+        max-width: 750px;
+        height: 85px;
+    }
+
+    .nav-icon {
+        font-size: 22px;
+    }
+
+    .nav-label {
+        font-size: 13px;
+    }
+}
+
+/* Prevent content overlap */
+body {
+    padding-bottom: 130px;
+}

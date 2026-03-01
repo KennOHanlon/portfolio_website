@@ -21,7 +21,7 @@ const Experience = () => {
     };
 
     return (
-        <div>
+        <div className="page-transition">
             {/* Resume Actions */}
             <div className="resume-actions">
                 <div className="resume-card">

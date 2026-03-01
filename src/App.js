@@ -9,6 +9,7 @@ import Nav from "./components/Nav";
 import Projects from "./pages/projects";
 import PostEmailSubmission from "./pages/PostEmailSubmission";
 import ScrollToTop from "./components/ScrollToTop";
+import BottomNav from "./components/BottomNav";
 
 function App() {
   return (
@@ -25,6 +26,8 @@ function App() {
             <Route path='/thanks' element={<PostEmailSubmission/>} />
         {/*<Route path='/sign-in' element={<SignIn />} />*/}
         </Routes>
+
+        <BottomNav />
     </Router>
   );
 }

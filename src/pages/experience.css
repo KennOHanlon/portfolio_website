@@ -7,6 +7,10 @@
     flex-wrap: wrap;
 }
 
+.page-transition {
+    animation: fadeUp 0.8s ease forwards;
+}
+
 /* ================= RESUME CARD ================= */
 
 .resume-card {
@@ -160,12 +164,6 @@
     animation: spin 0.8s linear infinite;
 }
 
-@keyframes spin {
-    to {
-        transform: rotate(360deg);
-    }
-}
-
 @media (max-width: 768px) {
     .resume-card {
         width: 100%;
@@ -192,5 +190,23 @@
     .modal-content {
         width: 95%;
         height: 90%;
+    }
+}
+
+/* ANIMATION */
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
